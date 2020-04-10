@@ -7,6 +7,7 @@ const AddedFeatures = ({ features }) => {
   return (
     <div className='content'>
       <h6>Added features:</h6>
+
       {features.length ? (
         <ol type='1'>
           {features.map((item) => (
