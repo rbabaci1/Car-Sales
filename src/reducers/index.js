@@ -4,6 +4,7 @@ import { addFeature, removeFeature } from '../helpers';
 
 const reducer = (currentState = defaultState, action) => {
   const { type, payload } = action;
+  console.log(currentState);
 
   switch (type) {
     case BUY_FEATURE:
