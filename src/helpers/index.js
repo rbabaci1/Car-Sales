@@ -8,12 +8,12 @@ export const addFeature = (state, newFeature) => {
 };
 
 export const removeFeature = (state, featureId) => {
-  const newCarFeatures = [
+  const newFeatures = [
     ...state.car.features.filter((feature) => feature.id !== featureId),
   ];
 
   return {
     ...state,
-    car: { ...state.car, features: newCarFeatures },
+    car: { ...state.car, features: newFeatures },
   };
 };

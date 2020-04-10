@@ -9,8 +9,7 @@ const reducer = (currentState = defaultState, action) => {
     case BUY_FEATURE:
       return addFeature(currentState, payload);
     case REMOVE_FEATURE: {
-      console.log('reducer here');
-      return currentState;
+      return removeFeature(currentState, payload);
     }
     default:
       return currentState;
