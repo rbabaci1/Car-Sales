@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { removeFeature } from '../actionsCreators';
 
-const AddedFeature = ({ feature }) => {
+const AddedFeature = ({ feature, removeFeature }) => {
   return (
     <li>
       <button className='button' onClick={() => removeFeature(feature.id)}>
@@ -13,4 +14,4 @@ const AddedFeature = ({ feature }) => {
   );
 };
 
-export default AddedFeature;
+export default connect(null, { removeFeature })(AddedFeature);
