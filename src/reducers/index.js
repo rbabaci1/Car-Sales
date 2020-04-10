@@ -1,5 +1,5 @@
 import { defaultState } from '../defaultState';
-import { BUY_FEATURE } from '../actionsCreators';
+import { BUY_FEATURE, REMOVE_FEATURE } from '../actionsCreators';
 import { addFeature } from '../helpers/addFeature';
 
 const reducer = (currentState = defaultState, action) => {
