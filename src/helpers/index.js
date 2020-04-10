@@ -1,9 +1,11 @@
 export const addFeature = (state, newFeature) => {
-  const carFeatures = [...state.car.features];
+  const prevFeatures = [...state.car.features];
+  const prevAdditionalPrice = state.additionalPrice;
 
   return {
     ...state,
-    car: { ...state.car, features: [...carFeatures, newFeature] },
+    additionalPrice: prevAdditionalPrice + newFeature.price,
+    car: { ...state.car, features: [...prevFeatures, newFeature] },
   };
 };
 
