@@ -26,4 +26,4 @@ const mapStateToProps = ({ car }) => {
   };
 };
 
-export default connect(mapStateToProps, null)(AddedFeatures);
+export default connect(mapStateToProps)(AddedFeatures);
