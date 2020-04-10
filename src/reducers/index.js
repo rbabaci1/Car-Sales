@@ -1,6 +1,7 @@
-import initialState from '../initialState.json';
+import { defaultState } from '../defaultState';
 
-const reducer = (initialState, action) => {
+const reducer = (initialState = defaultState, action) => {
+  console.log(initialState);
   return initialState;
 };
 
