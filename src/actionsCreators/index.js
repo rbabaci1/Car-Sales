@@ -9,7 +9,7 @@ export const removeFeature = (itemId) => {
   };
 };
 
-export const buyItem = (itemId) => {
+export const buyFeature = (itemId) => {
   // dipsatch an action here to add an item
   return {
     type: BUY_ITEM,
