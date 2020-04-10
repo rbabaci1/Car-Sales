@@ -8,6 +8,10 @@ import Total from './components/Total';
 const App = () => {
   const removeFeature = (item) => {
     // dispatch an action here to remove an item
+    return {
+      type: 'REMOVE_FEATURE',
+      payload: { item },
+    };
   };
 
   const buyItem = (item) => {
