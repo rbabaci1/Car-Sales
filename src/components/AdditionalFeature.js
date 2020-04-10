@@ -6,7 +6,7 @@ const AdditionalFeature = ({ feature, buyFeature }) => {
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button className='button' onClick={() => buyFeature(feature.id)}>
+      <button className='button' onClick={() => buyFeature(feature)}>
         Add
       </button>
       {feature.name} (+{feature.price})
