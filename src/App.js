@@ -6,22 +6,6 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 const App = () => {
-  const removeFeature = (item) => {
-    // dispatch an action here to remove an item
-    return {
-      type: 'REMOVE_FEATURE',
-      payload: { item },
-    };
-  };
-
-  const buyItem = (item) => {
-    // dipsatch an action here to add an item
-    return {
-      type: 'BUY_ITEM',
-      payload: { item },
-    };
-  };
-
   return (
     <div className='boxes'>
       <div className='box'>
