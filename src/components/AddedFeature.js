@@ -5,7 +5,7 @@ import { removeFeature } from '../actionsCreators';
 const AddedFeature = ({ feature, removeFeature }) => {
   return (
     <li>
-      <button className='button' onClick={() => removeFeature(feature.id)}>
+      <button className='button' onClick={() => removeFeature(feature)}>
         X
       </button>
       {feature.name}

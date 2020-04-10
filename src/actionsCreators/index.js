@@ -8,9 +8,9 @@ export const buyFeature = (feature) => {
   };
 };
 
-export const removeFeature = (featureId) => {
+export const removeFeature = (feature) => {
   return {
     type: REMOVE_FEATURE,
-    payload: featureId,
+    payload: feature,
   };
 };
