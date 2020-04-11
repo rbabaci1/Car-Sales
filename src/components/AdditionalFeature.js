@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { buyFeature } from '../actionsCreators';
+import { buyFeatureAction } from '../actionsCreators';
 
 const AdditionalFeature = ({ feature }) => {
   const dispatch = useDispatch();
@@ -9,10 +9,10 @@ const AdditionalFeature = ({ feature }) => {
     <li>
       <button
         className='button'
-        onClick={() => dispatch(buyFeature(feature))}
-        disabled={feature.isAdded}
+        onClick={() => dispatch(buyFeatureAction(feature))}
+        disabled={feature.bought}
       >
-        Add
+        {feature.bought ? '✅' : 'Add'}
       </button>
       {feature.name} (+{feature.price})
     </li>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeFeature } from '../actionsCreators';
+import { removeFeatureAction } from '../actionsCreators';
 
 const AddedFeature = ({ feature }) => {
   const dispatch = useDispatch();
@@ -9,7 +9,7 @@ const AddedFeature = ({ feature }) => {
     <li>
       <button
         className='button'
-        onClick={() => dispatch(removeFeature(feature))}
+        onClick={() => dispatch(removeFeatureAction(feature))}
       >
         X
       </button>

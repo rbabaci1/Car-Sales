@@ -8,9 +8,9 @@ export const defaultState = {
     features: [],
   },
   additionalFeatures: [
-    { id: 1, name: 'V-6 engine', price: 1500, isAdded: false },
-    { id: 2, name: 'Racing detail package', price: 1500, isAdded: false },
-    { id: 3, name: 'Premium sound system', price: 500, isAdded: false },
-    { id: 4, name: 'Rear spoiler', price: 250, isAdded: false },
+    { id: 1, name: 'V-6 engine', price: 1500, bought: false },
+    { id: 2, name: 'Racing detail package', price: 1500, bought: false },
+    { id: 3, name: 'Premium sound system', price: 500, bought: false },
+    { id: 4, name: 'Rear spoiler', price: 250, bought: false },
   ],
 };
