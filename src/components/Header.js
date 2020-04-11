@@ -1,7 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-const Header = ({ image, name, price }) => {
+const Header = () => {
+  const image = useSelector((state) => state.car.image);
+  const name = useSelector((state) => state.car.name);
+  const price = useSelector((state) => state.car.price);
+
   return (
     <>
       <figure className='image is-128x128'>
@@ -13,12 +17,4 @@ const Header = ({ image, name, price }) => {
   );
 };
 
-const mapStateToProps = ({ car }) => {
-  return {
-    image: car.image,
-    name: car.name,
-    price: car.price,
-  };
-};
-
-export default connect(mapStateToProps)(Header);
+export default Header;
