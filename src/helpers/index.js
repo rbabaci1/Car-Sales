@@ -1,10 +1,18 @@
+const toggleIsAdded = (additionalFeatures, featureId) => {
+  return additionalFeatures.map((additionalFeature) => {
+    if (additionalFeature.id === featureId) {
+      return { ...additionalFeature, isAdded: true };
+    }
+    return additionalFeature;
+  });
+};
+
 export const addFeature = (state, newFeature) => {
   const prevFeatures = [...state.car.features];
-  const prevAdditionalPrice = state.additionalPrice;
 
   return {
-    ...state,
-    additionalPrice: prevAdditionalPrice + newFeature.price,
+    additionalFeatures: toggleIsAdded(state.additionalFeatures, newFeature.id),
+    additionalPrice: state.additionalPrice + newFeature.price,
     car: { ...state.car, features: [...prevFeatures, newFeature] },
   };
 };

@@ -7,7 +7,11 @@ const AdditionalFeature = ({ feature }) => {
 
   return (
     <li>
-      <button className='button' onClick={() => dispatch(buyFeature(feature))}>
+      <button
+        className='button'
+        onClick={() => dispatch(buyFeature(feature))}
+        disabled={feature.isAdded}
+      >
         Add
       </button>
       {feature.name} (+{feature.price})
