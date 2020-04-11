@@ -1,10 +1,10 @@
 export const BUY_FEATURE = 'BUY_FEATURE';
 export const REMOVE_FEATURE = 'REMOVE_FEATURE';
 
-export const buyFeatureAction = (feature) => {
+export const buyFeatureAction = (feature, setBought) => {
   return {
     type: BUY_FEATURE,
-    payload: feature,
+    payload: { feature, setBought },
   };
 };
 
